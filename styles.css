@@ -193,8 +193,12 @@ body {
 }
 
 /* Icon Hover */
-.dashboard-icon:hover,
-.menu-icon:hover {
+.dashboard-heading:hover,
+.sidebar-item:hover,
+.menu-icon:hover,
+.profile-image-small:hover,
+.profile-image-medium:hover,
+.action-button:hover {
     transform: scale(1.1);
 }
 
