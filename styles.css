@@ -82,7 +82,7 @@ svg {
     background-color: white;
     border: 5px gray;
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: minmax(400px, 2fr) minmax(400px, 1fr);
     grid-template-rows: 2fr 3fr;
     padding: 10px 20px;
     align-items: center;
@@ -94,10 +94,10 @@ svg {
 }
 
 .search-section {
-    display: grid;
-    grid-template-columns: 30px 1fr;
+    display: flex;
     align-items: center;
     gap: 20px;
+    min-width: 350px;
 
 }
 
@@ -110,6 +110,8 @@ svg {
     border-color: black;
     height: 15px;
     padding: 10px;
+    max-width: 500px;
+    flex: 1 0 20em;
 }
 
 .profile-view-section {
@@ -149,29 +151,29 @@ svg {
     font-size: medium;
 }
 
+
 .button-container {
     gap: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: end;
 }
 
 .action-button {
     /* border-radius: 30%;
     background-color: #1992d4;
-    border: none;
-    width: 100px;
-    height: 30px; */
+    border: none; */
+    height: 30px;
     background-color: #1992d4;
     border: none;
     color: white;
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
     text-align: center;
     text-decoration: none;
     display: inline-block;
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 16px;
-    flex: 1;
+    flex: 0 0 100px;
 }
 
 
@@ -187,6 +189,7 @@ svg {
 .menu-icon {
     height: 25px;
     justify-self: center;
+    flex-shrink: 0;
 }
 
 .header .menu-icon {
