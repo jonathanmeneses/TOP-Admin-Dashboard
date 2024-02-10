@@ -79,7 +79,7 @@ svg {
 /* Right Content */
 .right-content {
     display: grid;
-    grid-template-rows: 2fr 9fr;
+    grid-template-rows: auto 1fr;
     gap: 4px;
 }
 
@@ -89,7 +89,7 @@ svg {
     border: 5px gray;
     display: grid;
     grid-template-columns: minmax(400px, 2fr) minmax(400px, 1fr);
-    grid-template-rows: 2fr 3fr;
+    grid-template-rows: auto auto;
     padding: 10px 20px;
     align-items: center;
 }
@@ -140,7 +140,7 @@ svg {
 /* Greeting View */
 .greeting-view {
     display: grid;
-    grid-template-columns: 50px 3fr;
+    grid-template-columns: auto 1fr;
     gap: 10px;
 }
 
@@ -152,15 +152,17 @@ svg {
 }
 
 /* Small Text */
-.small-text {
+.small-greeting-text {
     margin: 0;
     font-size: small;
+
 }
 
 /* Strong Text */
-.strong-text {
+.strong-greeting-text {
     margin: 0;
     font-size: medium;
+    align-self: baseline;
 }
 
 /* Button Container */
@@ -168,6 +170,15 @@ svg {
     gap: 20px;
     display: flex;
     justify-content: end;
+}
+
+
+/* Main Content Container */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 4px;
+    padding: 20px;
 }
 
 /* Action Button */
@@ -220,6 +231,12 @@ svg {
 /* Image Icon Sizing */
 .profile-image-small {
     height: 50px;
+    border-radius: 50%;
+    align-self: center;
+}
+
+.profile-image-medium {
+    height: 75px;
     border-radius: 50%;
     align-self: center;
 }
