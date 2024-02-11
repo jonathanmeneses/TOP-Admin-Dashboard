@@ -151,13 +151,23 @@ body {
 }
 
 /* Small Text */
-.small-greeting-text {
+.small-greeting-text,
+.reason {
     margin: 0;
     font-size: small;
 
 }
 
+
+
 /* Strong Text */
+
+.user {
+    margin: 0;
+    font-size: medium;
+    align-self: center;
+}
+
 .strong-greeting-text {
     margin: 0;
     font-size: medium;
@@ -232,9 +242,8 @@ body {
 
 .card-section {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 10px 20px;
-    align-items: stretch;
 }
 
 
@@ -242,6 +251,7 @@ body {
     display: flex;
     flex-direction: column;
     align-content: start;
+    height: 250px;
     padding-left: 20px;
     padding-top: 10px;
     padding-right: 10px;
@@ -254,7 +264,8 @@ body {
 }
 
 
-.card-header {
+.card-header,
+.announcement-item-header {
     font-weight: 400;
     margin-bottom: 5px;
     /* margin-top: 10px */
@@ -310,12 +321,7 @@ svg {
 }
 
 .truncate {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    /* number of lines to display before truncating */
-    -webkit-box-orient: vertical;
+    overflow: auto
 }
 
 .action-icons {
@@ -328,14 +334,58 @@ svg {
 
 .announcement-content-grid {
     display: grid;
-    grid-template-columns: 1fr;
-    ;
-    grid-template-rows: auto;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: white;
+    border-radius: 10px;
+    width: 300px;
+    padding: 24px;
+    margin-bottom: 20px;
+    height: 350px;
+    overflow: auto;
+}
+
+.trending-content-grid {
+    display: grid;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    background-color: white;
+    border-radius: 10px;
+    width: 300px;
+    padding: 24px;
+    margin-bottom: 20px;
+    height: 350px;
+}
+
+.trending-item {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 60px 150px;
+    height: 75px;
+    gap: 10px;
+
 }
 
 .announcement-item {
-    display: flex;
-    flex-direction: column;
+    padding: 12px;
+    border-bottom: 1px solid #a1a1a1;
 
+}
+
+.trending-item-details {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.announcement-item:last-child {
+    border-bottom: none;
+}
+
+.announcement-item-header {
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+.announcement-content {
+    font-size: small;
+    margin: 0;
+    color: #6c757d;
 }
