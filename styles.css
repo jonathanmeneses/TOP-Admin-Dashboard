@@ -176,7 +176,7 @@ body {
 .main-content {
     display: grid;
     grid-template-columns: 1fr 300px;
-    gap: 4px;
+    gap: 20px;
     padding: 20px;
     background-color: white;
     overflow: scroll;
@@ -223,19 +223,20 @@ body {
     gap: 4px;
 }
 
+.content-right {
+    display: grid;
+    grid-template-rows: 50px 1fr 50px 1fr;
+    gap: 4px;
+}
+
 
 .card-section {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
     gap: 10px 20px;
     align-items: stretch;
 }
 
-.card-section>* {
-    /* max-height: 200px; */
-    /* overflow: auto; */
-    /* transition: all 0.5s ease; */
-}
 
 .card {
     display: flex;
@@ -262,6 +263,12 @@ body {
 .card-content {
     color: #6c757d;
 
+}
+
+.grid-right {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
 }
 
 
