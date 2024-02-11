@@ -325,3 +325,17 @@ svg {
     margin-top: auto;
     margin-bottom: 10px
 }
+
+.announcement-content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    ;
+    grid-template-rows: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.announcement-item {
+    display: flex;
+    flex-direction: column;
+
+}
